@@ -15,7 +15,7 @@ const ImageGrid = ({ images, onImageClick }) => {
     );
   }
 
-  const numColumns = 5;
+  const numColumns = 3;
   const imageColumns = Array.from({ length: numColumns }, () => []);
   const columnHeights = new Array(numColumns).fill(0);
 

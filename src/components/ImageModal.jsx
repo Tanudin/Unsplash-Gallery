@@ -89,12 +89,6 @@ const ImageModal = ({ image, onClose }) => {
                   </span>
                 </div>
               )}
-              {image.location?.name && (
-                <div className="detail-row">
-                  <span className="detail-label">Location:</span>
-                  <span className="detail-value">{image.location.name}</span>
-                </div>
-              )}
             </div>
 
             <div className="modal-actions">
