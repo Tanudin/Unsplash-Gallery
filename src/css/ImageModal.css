@@ -1,0 +1,259 @@
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(13, 27, 42, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.modal-content {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  background-color: #1B263B;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(27, 38, 59, 0.8);
+  border: none;
+  color: #E0E1DD;
+  font-size: 1.75rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: background 0.3s ease;
+  line-height: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.modal-close:hover {
+  background: #415A77;
+}
+
+.modal-body {
+  display: flex;
+  gap: 2rem;
+  min-height: 500px;
+}
+
+.modal-image-section {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0D1B2A;
+  padding: 2rem;
+}
+
+.modal-image {
+  max-width: 100%;
+  max-height: 80vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.modal-info-section {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.modal-title {
+  color: #E0E1DD;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  padding-right: 3rem;
+  text-transform: capitalize;
+  word-wrap: break-word;
+}
+
+.modal-photographer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #415A77;
+}
+
+.photographer-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.photographer-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.photographer-name {
+  color: #E0E1DD;
+  font-weight: 600;
+  margin: 0;
+}
+
+.photographer-link {
+  color: #778DA9;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.photographer-link:hover {
+  color: #E0E1DD;
+}
+
+.modal-description h3 {
+  color: #E0E1DD;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+}
+
+.modal-description p {
+  color: #778DA9;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.modal-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+  background-color: rgba(65, 90, 119, 0.2);
+  border-radius: 8px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stat-label {
+  color: #778DA9;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-value {
+  color: #E0E1DD;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.modal-details h3 {
+  color: #E0E1DD;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem 0;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(65, 90, 119, 0.3);
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-label {
+  color: #778DA9;
+  font-size: 0.9rem;
+}
+
+.detail-value {
+  color: #E0E1DD;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.action-button {
+  flex: 1;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.action-button.primary {
+  background-color: #415A77;
+  color: #E0E1DD;
+}
+
+.action-button.primary:hover {
+  background-color: #778DA9;
+}
+
+.action-button.secondary {
+  background-color: transparent;
+  color: #E0E1DD;
+  border: 2px solid #415A77;
+}
+
+.action-button.secondary:hover {
+  background-color: rgba(65, 90, 119, 0.2);
+}
+
+.modal-credit {
+  text-align: center;
+  padding-top: 1rem;
+  border-top: 1px solid #415A77;
+}
+
+.modal-credit p {
+  color: #778DA9;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.modal-credit a {
+  color: #E0E1DD;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.modal-credit a:hover {
+  text-decoration: underline;
+}

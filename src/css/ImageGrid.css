@@ -1,0 +1,24 @@
+.image-grid {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.image-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.no-results {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #415A77;
+}
+
+.no-results p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0;
+}
