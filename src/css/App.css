@@ -153,8 +153,8 @@ body:has(.hero-search:focus-within) .navbar .navbar-title {
 .hero-section:has(.search-form:focus-within) .hero-overlay,
 .hero-section:has(.preset-buttons:hover) .hero-overlay,
 .hero-section:has(.hero-search:hover) .hero-overlay {
-  background: rgba(13, 27, 42, 0.5) !important;
-  backdrop-filter: blur(3px) !important;
+  background: rgba(13, 27, 42, 0.5);
+  backdrop-filter: blur(3px);
 }
 
 .hero-content {

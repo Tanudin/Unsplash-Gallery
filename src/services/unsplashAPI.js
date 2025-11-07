@@ -2,7 +2,7 @@ import { generateMockImages, mockSearchResults } from './mockData';
 
 const ACCESS_KEY = import.meta.env.VITE_UNSPLASH_ACCESS_KEY;
 const BASE_URL = 'https://api.unsplash.com';
-const USE_MOCK_DATA = true;
+const USE_MOCK_DATA = false;
 
 /**
  * Fetches random photos from Unsplash API

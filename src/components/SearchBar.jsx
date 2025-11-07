@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import '../css/SearchBar.css';
 
 /**
@@ -8,21 +9,26 @@ import '../css/SearchBar.css';
  * @param {Function} onChange - Callback when input value changes
  */
 const SearchBar = ({ onSearch, presetButtons, value, onChange }) => {
+  const inputRef = useRef(null);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (value && value.trim()) {
       onSearch(value.trim());
+      inputRef.current?.blur();
     }
   };
 
   const handleClear = () => {
     onChange('');
     onSearch('');
+    inputRef.current?.blur();
   };
 
   const handlePresetClick = (term) => {
     onChange(term);
     onSearch(term);
+    inputRef.current?.blur();
   };
 
   return (
@@ -47,6 +53,7 @@ const SearchBar = ({ onSearch, presetButtons, value, onChange }) => {
             </svg>
             
             <input
+              ref={inputRef}
               type="text"
               className="search-input"
               placeholder="Search for images..."
